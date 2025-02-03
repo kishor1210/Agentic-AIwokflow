@@ -8,3 +8,4 @@ uvicorn
 groq
 openai
 exa-py
+exa

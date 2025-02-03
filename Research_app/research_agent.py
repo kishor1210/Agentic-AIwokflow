@@ -7,12 +7,13 @@ from phi.tools.exa import ExaTools
 from phi.model.groq import Groq
 
 import groq
+import exa
 import os
 from dotenv import load_dotenv
 load_dotenv()
 
 groq.api = os.getenv("GROQ_API_KEY")
-
+exa.api = os.getenv("EXA_API_KEY")
 
 agent = Agent(
     model=Groq(id="deepseek-r1-distill-llama-70b"),
@@ -53,4 +54,4 @@ agent = Agent(
     add_datetime_to_instructions=True,
     save_response_to_file="tmp/{message}.md",
 )
-agent.print_response("attention is all you need", stream=True)
+agent.print_response("Simulation theory", stream=True)
