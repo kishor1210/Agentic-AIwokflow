@@ -54,4 +54,4 @@ agent = Agent(
     add_datetime_to_instructions=True,
     save_response_to_file="tmp/{message}.md",
 )
-agent.print_response("Simulation theory", stream=True)
+agent.print_response("Attention Is All You Need", stream=True)
